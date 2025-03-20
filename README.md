@@ -1,4 +1,4 @@
-# storybookverse 🌌  
+# 🌌 storybookverse   
 
 Este repositório é dedicado a centralizar conteúdos, boas práticas e guias sobre o **Storybook**, a ferramenta essencial para desenvolver, documentar e testar componentes de interface de forma isolada.  
 
