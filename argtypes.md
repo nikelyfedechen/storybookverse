@@ -5,7 +5,7 @@ Os argTypes no Storybook são uma forma de configurar, documentar e controlar os
 ### Sumário
 
 - [Em detalhes](#em-detalhes)
-  - [O que são `args`?](#-o-que-são-args)
+  - [O que são `args`?](#o-que-são-args)
   - [O que são `argTypes`?](#o-que-são-argtypes)
 - [Ordenação por ordem alfabética](#ordenação-por-ordem-alfabética)
 
