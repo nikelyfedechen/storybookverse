@@ -2,9 +2,16 @@
 
 Os argTypes no Storybook são uma forma de configurar, documentar e controlar os argumentos (props) de um componente dentro da interface interativa do Storybook.
 
+### Sumário
+
+- [Em detalhes](#em-detalhes)
+  - [O que são `args`?](#-o-que-são-args)
+  - [O que são `argTypes`?](#o-que-são-argtypes)
+- [Ordenação por ordem alfabética](#ordenação-por-ordem-alfabética)
+
 ## Em detalhes:
 
-### 📌 O que são `args`?
+### O que são `args`?
 
 Os args são os valores das props que você passa para um componente nas suas stories.
 
@@ -21,7 +28,7 @@ export const Padrao = {
 
 Isso equivale a `<Botao label="Clique aqui" disabled={false} />`.
 
-### 🧠 E os `argTypes`?
+### O que são `argTypes`?
 
 São metadados que descrevem os args — tipo, descrição, controle, categoria, ordem, etc. Isso é útil tanto para gerar documentação automática quanto para permitir a edição desses valores via painel de controles do Storybook.
 
