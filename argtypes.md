@@ -8,8 +8,9 @@ Os argTypes no Storybook são uma forma de configurar, documentar e controlar os
   - [O que são `args`?](#o-que-são-args)
   - [O que são `argTypes`?](#o-que-são-argtypes)
 - [Ordenação por ordem alfabética](#ordenação-por-ordem-alfabética)
+- [Como adicionar defaultValue na tabela de documentação](#como-adicionar-defaultvalue-na-tabela-de-documentação)
 
-## Em detalhes:
+## Em detalhes
 
 ### O que são `args`?
 
@@ -82,3 +83,45 @@ export const Padrao: Story = {
   },
 };
 ```
+
+## Como adicionar defaultValue na tabela de documentação
+
+Se quiser exibir o valor padrão de uma prop na tabela da aba "Docs" do Storybook, use a chave table.defaultValue dentro da configuração de argTypes. Isso não afeta o valor usado nos controles, apenas documenta.
+
+Exemplo:
+
+```javascript
+argTypes: {
+  label: {
+    description: 'Texto exibido no botão',
+    control: 'text',
+    table: {
+      defaultValue: { summary: 'Clique aqui' },
+    },
+  },
+  disabled: {
+    description: 'Desativa o botão',
+    control: 'boolean',
+    table: {
+      defaultValue: { summary: false },
+    },
+  },
+}
+```
+> Dica: Use summary para mostrar uma string simples. Se quiser, pode usar detail para complementar com uma explicação mais longa ou com o tipo completo.
+
+Se quiser que o valor padrão também seja usado no controle interativo do Storybook, defina em paralelo o args:
+
+```javascript
+export const Padrao = {
+  args: {
+    label: 'Clique aqui',
+    disabled: false,
+  },
+};
+```
+Ou seja:
+- `args` → define o valor inicial usado nos controles.
+- `argTypes.table.defaultValue` → documenta o valor padrão na aba Docs.
+
+Separando bem essas responsabilidades, a documentação fica clara e o comportamento interativo do componente é consistente.
