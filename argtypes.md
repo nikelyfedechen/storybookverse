@@ -68,9 +68,11 @@ const meta: Meta<typeof MeuComponente> = {
   title: "Componentes/MeuComponente",
   component: MeuComponente,
   parameters: {
-    controls: {
-      sort: "alpha",
-    },
+    docs: {
+      controls: {
+            sort: "alpha",
+          },
+      }
   },
 };
 
